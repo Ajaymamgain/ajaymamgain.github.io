@@ -16,6 +16,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TTBRMFS');</script>
 <!-- End Google Tag Manager -->
+<script>
+var cookiees = document.cookie
+  .split(';')
+  .map(cookie => cookie.split('='))
+  .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+</script>
+<script>
+  dataLayer = [{
+    'cookieesDrift': cookiees.drift_aid
+  }]
+</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
